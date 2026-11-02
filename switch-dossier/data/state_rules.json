@@ -1,0 +1,8 @@
+{
+  "_note": "Baseline text is a general summary, not legal advice. Add per-state entries under 'states' (keyed by two-letter code) after checking the state's current pharmacy practice act. Each entry may set biologic and/or generic text, plus 'source_url' and 'reviewed' (ISO date).",
+  "baseline": {
+    "biologic": "All 50 states and DC have enacted laws on pharmacy-level substitution of interchangeable biological products. Common elements: the FDA must have designated the product interchangeable; the prescriber can block substitution (for example 'dispense as written'); the pharmacist must notify the prescriber of the substitution within a set window; and substitution records must be kept. Details differ by state. A biosimilar that is not designated interchangeable generally cannot be substituted at the pharmacy and needs a prescriber order, for example through a P&T-approved switch protocol.",
+    "generic": "All states permit pharmacy-level generic substitution of therapeutically equivalent (AB-rated) products unless the prescriber blocks it. Some states restrict substitution for narrow-therapeutic-index drugs or require patient consent or notification."
+  },
+  "states": {}
+}

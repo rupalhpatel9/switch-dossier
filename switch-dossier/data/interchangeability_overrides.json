@@ -1,0 +1,4 @@
+{
+  "_note": "Optional, user-maintained. FDA's Purple Book is the authority for interchangeability designations and has no open API wired into this build. Add entries as { \"adalimumab-adbm\": { \"interchangeable\": true, \"source_url\": \"https://purplebooksearch.fda.gov/\", \"checked\": \"2026-11-01\" } }. Entries are shown in the dossier as user-supplied and are not independently verified.",
+  "entries": {}
+}

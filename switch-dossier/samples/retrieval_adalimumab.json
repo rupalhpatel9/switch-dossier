@@ -1,0 +1,689 @@
+{
+  "drug": "adalimumab",
+  "retrievedAt": "2026-11-02T01:44:35.433Z",
+  "labels": [
+    {
+      "brand": "IDACIO",
+      "generic": "ADALIMUMAB-AACF",
+      "manufacturer": "Fresenius Kabi USA, LLC",
+      "application": "BLA761255",
+      "setId": "08dbaffe-9d05-43cf-b24b-b44ade8685fc",
+      "effective": "20241015"
+    },
+    {
+      "brand": "Cyltezo",
+      "generic": "ADALIMUMAB-ADBM",
+      "manufacturer": "Boehringer Ingelheim Pharmaceuticals, Inc.",
+      "application": "BLA761058",
+      "setId": "115ea79b-7209-7f19-b35d-36ec0828fbf5",
+      "effective": "20260522"
+    },
+    {
+      "brand": "Simlandi",
+      "generic": "ADALIMUMAB-RYVK",
+      "manufacturer": "Teva Pharmaceuticals USA, Inc.",
+      "application": "BLA761299",
+      "setId": "12f609c9-2088-bb05-e063-6394a90a9ecc",
+      "effective": "20251031"
+    },
+    {
+      "brand": "ABRILADA",
+      "generic": "ADALIMUMAB-AFZB",
+      "manufacturer": "A-S Medication Solutions",
+      "application": "BLA761118",
+      "setId": "1602cfaf-9ddd-4eb6-b847-10a4eebcf5e5",
+      "effective": "20260807"
+    },
+    {
+      "brand": "HYRIMOZ",
+      "generic": "ADALIMUMAB-ADAZ",
+      "manufacturer": "Sandoz Inc",
+      "application": "BLA761071",
+      "setId": "1ac7d061-3380-468c-b077-c05f8dfbc829",
+      "effective": "20251017"
+    },
+    {
+      "brand": "Adalimumab-aacf",
+      "generic": "ADALIMUMAB",
+      "manufacturer": "Fresenius Kabi USA, LLC",
+      "application": "BLA761255",
+      "setId": "2488b0bc-7b8f-4cc8-91ea-48e7ea5e8915",
+      "effective": "20260108"
+    },
+    {
+      "brand": "Adalimumab-ryvk",
+      "generic": "ADALIMUMAB-RYVK",
+      "manufacturer": "Teva Pharmaceuticals USA, Inc.",
+      "application": "BLA761299",
+      "setId": "2d19a877-1f5a-4731-800a-dddadc424080",
+      "effective": "20251231"
+    },
+    {
+      "brand": "Adalimumab",
+      "generic": "ADALIMUMAB-ADAZ",
+      "manufacturer": "Sandoz Inc",
+      "application": "BLA761071",
+      "setId": "3468792f-63ef-4916-8ed1-8214f327d9dd",
+      "effective": "20251021"
+    },
+    {
+      "brand": "HYRIMOZ",
+      "generic": "ADALIMUMAB-ADAZ",
+      "manufacturer": "Cordavis Limited",
+      "application": "BLA761071",
+      "setId": "3e303a4a-980b-4f2a-9d03-786928758637",
+      "effective": "20251017"
+    },
+    {
+      "brand": "Idacio",
+      "generic": "ADALIMUMAB-AACF",
+      "manufacturer": "Fresenius Kabi USA, LLC",
+      "application": "BLA761255",
+      "setId": "43de75ac-1a37-4609-9edd-68bda2448a47",
+      "effective": "20260130"
+    },
+    {
+      "brand": "Humira",
+      "generic": "ADALIMUMAB",
+      "manufacturer": "Cordavis Limited",
+      "application": "BLA125057",
+      "setId": "4977567e-3525-44ac-9ff5-f1e74b053950",
+      "effective": "20251223"
+    },
+    {
+      "brand": "Yuflyma",
+      "generic": "ADALIMUMAB-AATY",
+      "manufacturer": "CELLTRION USA, Inc.",
+      "application": "BLA761219",
+      "setId": "526d626f-8c9f-496c-b838-00a73bb36383",
+      "effective": "20260715"
+    },
+    {
+      "brand": "Adalimumab",
+      "generic": "ADALIMUMAB-FKJP",
+      "manufacturer": "Biocon Biologics Inc",
+      "application": "BLA761154",
+      "setId": "5cde907d-6747-0e62-db25-1718ee717fe7",
+      "effective": "20260112"
+    },
+    {
+      "brand": "ABRILADA",
+      "generic": "ADALIMUMAB-AFZB",
+      "manufacturer": "Pfizer Laboratories Div Pfizer Inc",
+      "application": "BLA761118",
+      "setId": "5ef1c7cf-466f-495e-8d13-82e2ddfa7a4f",
+      "effective": "20260506"
+    },
+    {
+      "brand": "Humira",
+      "generic": "ADALIMUMAB",
+      "manufacturer": "AbbVie Inc.",
+      "application": "BLA125057",
+      "setId": "608d4f0d-b19f-46d3-749a-7159aa5f933d",
+      "effective": "20251223"
+    },
+    {
+      "brand": "Adalimumab-adbm",
+      "generic": "ADALIMUMAB-ADBM",
+      "manufacturer": "Boehringer Ingelheim Pharmaceuticals, Inc.",
+      "application": "BLA761058",
+      "setId": "62f39a7c-00df-4519-a8d4-39bbd0a649ed",
+      "effective": "20251112"
+    },
+    {
+      "brand": "HULIO",
+      "generic": "ADALIMUMAB-FKJP",
+      "manufacturer": "Biocon Biologics Inc",
+      "application": "BLA761154",
+      "setId": "661ad70b-c313-2899-8a7e-7a67bd897ca9",
+      "effective": "20250206"
+    },
+    {
+      "brand": "HADLIMA",
+      "generic": "ADALIMUMAB-BWWD",
+      "manufacturer": "A-S Medication Solutions",
+      "application": "BLA761059",
+      "setId": "7345f276-102e-4175-b7ef-ff1706b05472",
+      "effective": "20231023"
+    },
+    {
+      "brand": "ABRILADA",
+      "generic": "ADALIMUMAB-AFZB",
+      "manufacturer": "A-S Medication Solutions",
+      "application": "BLA761118",
+      "setId": "79943fe6-1249-4074-9aed-c53937820d0f",
+      "effective": "20260618"
+    },
+    {
+      "brand": "AMJEVITA",
+      "generic": "ADALIMUMAB-ATTO",
+      "manufacturer": "Amgen, Inc",
+      "application": "BLA761024",
+      "setId": "9c44bd5b-4464-40a4-8933-8680950f00f2",
+      "effective": "20260625"
+    },
+    {
+      "brand": "HUMIRA",
+      "generic": "ADALIMUMAB",
+      "manufacturer": "A-S Medication Solutions",
+      "application": "BLA125057",
+      "setId": "a06a9aec-fd5b-4c3e-a81f-eb46bb384100",
+      "effective": "20240516"
+    },
+    {
+      "brand": "AMJEVITA",
+      "generic": "ADALIMUMAB-ATTO",
+      "manufacturer": "Amgen USA Inc.",
+      "application": "BLA761024",
+      "setId": "b7178e36-6787-45ab-8fee-be59bc6a4aa4",
+      "effective": "20260713"
+    },
+    {
+      "brand": "Simlandi",
+      "generic": "ADALIMUMAB-RYVK",
+      "manufacturer": "A-S Medication Solutions",
+      "application": "BLA761299",
+      "setId": "ba9dd71c-13c9-4cfe-84a2-b4f17d1c583f",
+      "effective": "20251016"
+    },
+    {
+      "brand": "Adalimumab-bwwd",
+      "generic": "ADALIMUMAB-BWWD",
+      "manufacturer": "Cordavis Limited",
+      "application": "BLA761059",
+      "setId": "c24655e5-796e-4127-b716-92f08d649c83",
+      "effective": "20251017"
+    },
+    {
+      "brand": "HADLIMA",
+      "generic": "ADALIMUMAB-BWWD",
+      "manufacturer": "A-S Medication Solutions",
+      "application": "BLA761059",
+      "setId": "c361dd60-c88d-4f3c-b98c-79687bbc3450",
+      "effective": "20260514"
+    },
+    {
+      "brand": "Adalimumab",
+      "generic": "ADALIMUMAB-AATY",
+      "manufacturer": "CELLTRION USA, Inc.",
+      "application": "BLA761219",
+      "setId": "c44365e9-d470-4e35-978d-8565a9e3471e",
+      "effective": "20260708"
+    },
+    {
+      "brand": "YUSIMRY",
+      "generic": "ADALIMUMAB-AQVH",
+      "manufacturer": "Coherus BioSciences Inc",
+      "application": "BLA761216",
+      "setId": "cd0e7af2-7704-49ce-bde9-f645294b6788",
+      "effective": "20250516"
+    },
+    {
+      "brand": "AMJEVITA",
+      "generic": "ADALIMUMAB-ATTO",
+      "manufacturer": "Nuvaila Limited",
+      "application": "BLA761024",
+      "setId": "d7862491-2634-4402-b001-dcc1abf8dd58",
+      "effective": "20260625"
+    },
+    {
+      "brand": "Adalimumab-ryvk",
+      "generic": "ADALIMUMAB-RYVK",
+      "manufacturer": "Quallent Pharmaceuticals Health LLC",
+      "application": "BLA761299",
+      "setId": "dce1590f-9e47-4c4d-9437-cfb18b779a75",
+      "effective": "20260119"
+    },
+    {
+      "brand": "Adalimumab-ryvk",
+      "generic": "ADALIMUMAB-RYVK",
+      "manufacturer": "Teva Pharmaceuticals USA, Inc.",
+      "application": "BLA761299",
+      "setId": "f8c0d3c2-b5ed-4bb8-927c-5c5529343ee6",
+      "effective": "20260303"
+    },
+    {
+      "brand": "Adalimumab-adbm",
+      "generic": "ADALIMUMAB-ADBM",
+      "manufacturer": "QUALLENT PHARMACEUTICALS HEALTH LLC",
+      "application": "BLA761058",
+      "setId": "f9986706-9c75-4335-a54f-09d7716dbcef",
+      "effective": "20241112"
+    }
+  ],
+  "drugsFda": {
+    "total": 11,
+    "applications": [
+      {
+        "application": "BLA761058",
+        "sponsor": "BOEHRINGER INGELHEIM",
+        "products": [
+          {
+            "brand": "CYLTEZO",
+            "status": "Prescription"
+          }
+        ]
+      },
+      {
+        "application": "BLA761059",
+        "sponsor": "SAMSUNG BIOEPIS CO LTD",
+        "products": [
+          {
+            "brand": "HADLIMA",
+            "status": "Prescription"
+          }
+        ]
+      },
+      {
+        "application": "BLA761071",
+        "sponsor": "SANDOZ INC",
+        "products": [
+          {
+            "brand": "HYRIMOZ",
+            "status": "Prescription"
+          }
+        ]
+      },
+      {
+        "application": "BLA761118",
+        "sponsor": "PFIZER INC",
+        "products": [
+          {
+            "brand": "ABRILADA",
+            "status": "Prescription"
+          },
+          {
+            "brand": "ABRILADA",
+            "status": "Prescription"
+          },
+          {
+            "brand": "ABRILADA",
+            "status": "Prescription"
+          }
+        ]
+      },
+      {
+        "application": "BLA761154",
+        "sponsor": "MYLAN PHARMS INC",
+        "products": [
+          {
+            "brand": "HULIO",
+            "status": "Prescription"
+          }
+        ]
+      },
+      {
+        "application": "BLA761216",
+        "sponsor": "EMERGE BIOSCIENCE PTE LTD",
+        "products": [
+          {
+            "brand": "YUSIMRY",
+            "status": "Prescription"
+          }
+        ]
+      },
+      {
+        "application": "BLA761219",
+        "sponsor": "CELLTRION",
+        "products": [
+          {
+            "brand": "YUFLYMA",
+            "status": "Prescription"
+          }
+        ]
+      },
+      {
+        "application": "BLA761255",
+        "sponsor": "FRESENIUS KABI USA",
+        "products": [
+          {
+            "brand": "IDACIO",
+            "status": "Prescription"
+          }
+        ]
+      },
+      {
+        "application": "BLA761299",
+        "sponsor": "ALVOTECH USA INC",
+        "products": [
+          {
+            "brand": "SIMLANDI",
+            "status": "Prescription"
+          }
+        ]
+      },
+      {
+        "application": "BLA125057",
+        "sponsor": "ABBVIE INC",
+        "products": [
+          {
+            "brand": "HUMIRA",
+            "status": "Prescription"
+          },
+          {
+            "brand": "HUMIRA",
+            "status": "Prescription"
+          }
+        ]
+      },
+      {
+        "application": "BLA761024",
+        "sponsor": "AMGEN INC",
+        "products": [
+          {
+            "brand": "AMJEVITA",
+            "status": "Prescription"
+          },
+          {
+            "brand": "AMJEVITA",
+            "status": "Prescription"
+          }
+        ]
+      }
+    ]
+  },
+  "pubmed": [
+    {
+      "pmid": "37989973",
+      "title": "Patient perceptions on switching from reference product adalimumab to biosimilar adalimumab-atto.",
+      "abstract": "",
+      "journal": "Clinical rheumatology",
+      "year": "2024"
+    },
+    {
+      "pmid": "34649465",
+      "title": "In Preparation for Biosimilar \"Switch\" Policy: How to Mitigate the Nocebo Effect.",
+      "abstract": "",
+      "journal": "Journal of cutaneous medicine and surgery",
+      "year": "2022"
+    },
+    {
+      "pmid": "34042171",
+      "title": "Efficacy of switching from adalimumab originator to adalimumab biosimilar in moderate to severe psoriasis patients: A Real-life experience in a tertiary referral centre.",
+      "abstract": "",
+      "journal": "The Australasian journal of dermatology",
+      "year": "2021"
+    },
+    {
+      "pmid": "31568820",
+      "title": "Biosimilars in rheumatology.",
+      "abstract": "Biotechnologicals are an invaluable resource in the treatment of patients with inflammatory rheumatic diseases (IRD) non-responsive or intolerant to conventional therapies. However, they are the main driver for increase in direct costs and represent a significant economic burden to healthcare systems worldwide. Since biosimilars are similar and more affordable versions of previously licenced biotechnologicals, they are expected to contribute to healthcare system sustainability and reduce inequities in treatment access. The landmark approval of CT-P13 as the first infliximab biosimilar paved the way for new infliximab but also etanercept, adalimumab and rituximab biosimilars. In Europe, North America and some countries of Asia, development is strictly regulated and only those presenting a totality-of-evidence dossier with highly similar physicochemical, biological and clinical performances are endorsed by regulatory agencies as biosimilars. The current article addresses the importance of biosimilar medicines in the treatment of IRD, as well as their innovative development and regulatory pathways, clinical evidence of similarity and challenges that may undermine their widespread use and success.",
+      "journal": "Pharmacological research",
+      "year": "2019"
+    },
+    {
+      "pmid": "36368906",
+      "title": "Efficacy of synthetic and biological DMARDs: a systematic literature review informing the 2022 update of the EULAR recommendations for the management of rheumatoid arthritis.",
+      "abstract": "OBJECTIVES: To update the evidence on efficacy of DMARDs (disease-modifying antirheumatic drugs) and inform the taskforce of the 2022 update of the European Alliance of Associations for Rheumatology (EULAR) recommendations for management of rheumatoid arthritis (RA). METHODS: This systematic literature review (SLR) investigated the efficacy of conventional synthetic (cs), biological (b), biosimilar and targeted synthetic (ts)DMARDs in patients with RA. Medline, EMBASE, Cochrane CENTRAL and Web of Science were used to identify all relevant articles published since the previous update in 2019 to 14 January 2022. RESULTS: Of 8969 search results, 169 articles were selected for detailed review and 47 were finally included. Trials investigated the efficacy of csDMARDs, bDMARDs and tsDMARDs, DMARD switching, tapering and trials investigating different treatment strategies. The compounds investigated were csDMARDs (methotrexate (MTX), leflunomide, sulfasalazine, hydroxychloroquine), bDMARDs (abatacept, adalimumab, certolizumab-pegol, denosumab, etanercept, infliximab, levilimab, olokizumab, opineracept, rituximab, sarilumab, tocilizumab) and tsDMARDs (baricitinib, filgotinib, tofacitinib, upadacitinib). The efficacy of csDMARDs+ short-term glucocorticoids in early RA was confirmed and similar to bDMARD+MTX combination therapy. Interleukin-6 pathway inhibition was effective in trials on olokizumab and levilimab. Janus kinase inhibitor (JAKi) was efficacious in different patient populations. After insufficient response to JAKi, patients could respond to TNFi treatment. Tapering of DMARDs was feasible for a proportion of patients, who were able to taper therapy while remaining in low disease activity or remission. CONCLUSION: The results of this SLR, together with one SLR on safety of DMARD and one on glucocorticoids, informed the taskforce of the 2022 update of the EULAR recommendations for pharmacological management of RA.",
+      "journal": "Annals of the rheumatic diseases",
+      "year": "2023"
+    },
+    {
+      "pmid": "36745550",
+      "title": "Switching from adalimumab originator to biosimilar: a 3-year retrospective cohort analysis.",
+      "abstract": "",
+      "journal": "Clinical and experimental dermatology",
+      "year": "2023"
+    },
+    {
+      "pmid": "28264816",
+      "title": "EULAR recommendations for the management of rheumatoid arthritis with synthetic and biological disease-modifying antirheumatic drugs: 2016 update.",
+      "abstract": "Recent insights in rheumatoid arthritis (RA) necessitated updating the European League Against Rheumatism (EULAR) RA management recommendations. A large international Task Force based decisions on evidence from 3 systematic literature reviews, developing 4 overarching principles and 12 recommendations (vs 3 and 14, respectively, in 2013). The recommendations address conventional synthetic (cs) disease-modifying antirheumatic drugs (DMARDs) (methotrexate (MTX), leflunomide, sulfasalazine); glucocorticoids (GC); biological (b) DMARDs (tumour necrosis factor (TNF)-inhibitors (adalimumab, certolizumab pegol, etanercept, golimumab, infliximab), abatacept, rituximab, tocilizumab, clazakizumab, sarilumab and sirukumab and biosimilar (bs) DMARDs) and targeted synthetic (ts) DMARDs (Janus kinase (Jak) inhibitors tofacitinib, baricitinib). Monotherapy, combination therapy, treatment strategies (treat-to-target) and the targets of sustained clinical remission (as defined by the American College of Rheumatology-(ACR)-EULAR Boolean or index criteria) or low disease activity are discussed. Cost aspects were taken into consideration. As first strategy, the Task Force recommends MTX (rapid escalation to 25 mg/week) plus short-term GC, aiming at >50% improvement within 3 and target attainment within 6 months. If this fails stratification is recommended. Without unfavourable prognostic markers, switching to-or adding-another csDMARDs (plus short-term GC) is suggested. In the presence of unfavourable prognostic markers (autoantibodies, high disease activity, early erosions, failure of 2 csDMARDs), any bDMARD (current practice) or Jak-inhibitor should be added to the csDMARD. If this fails, any other bDMARD or tsDMARD is recommended. If a patient is in sustained remission, bDMARDs can be tapered. For each recommendation, levels of evidence and Task Force agreement are provided, both mostly very high. These recommendations intend informing rheumatologists, patients, national rheumatology societies, hospital officials, social security agencies and regulators about EULAR's most recent consensus on the management of RA, aimed at attaining best outcomes with current therapies.",
+      "journal": "Annals of the rheumatic diseases",
+      "year": "2017"
+    },
+    {
+      "pmid": "36803373",
+      "title": "Clinical Efficacy of Biosimilar Switch of Adalimumab for Management of Uveitis.",
+      "abstract": "BACKGROUND: Adalimumab has demonstrated efficacy in non-infectious uveitis. With the introduction of biosimilar agents such as Amgevita, we aimed to quantify efficacy and tolerability compared to Humira in a multi-centre UK cohort. METHODS: Patients identified from tertiary uveitis clinics in 3 centres, after institution-mandated switching was implemented. RESULTS: Data collected for 102 patients, aged 2-75 years, with 185 active eyes. Following switch, rates of uveitis flare were not significantly different (13 events before, 21 after, p = .132). Rates of elevated intraocular pressure were decreased (32 before, 25 afterwards, p = .006) and dosing of oral and intra-ocular steroids was stable. Twenty-four patients (24%) requested to return to Humira, commonly due to pain from injection or technical difficulty with the device. CONCLUSION: Amgevita is safe and effective for inflammatory uveitis with non-inferiority to Humira. Significant numbers of patients requested to switch back due to side effects including injection site reactions.",
+      "journal": "Ocular immunology and inflammation",
+      "year": "2024"
+    }
+  ],
+  "trials": [
+    {
+      "nct": "NCT02925338",
+      "title": "National Observational Study On The Use Of Inflectra™ An Infliximab Biosimilar In Real Life",
+      "status": "COMPLETED",
+      "phase": null,
+      "enrollment": 1431
+    },
+    {
+      "nct": "NCT01856569",
+      "title": "Assial - Anti Tnf Treatment in Ankylosing Spondylitis: an Observational Cohort Study in Italy",
+      "status": "COMPLETED",
+      "phase": null,
+      "enrollment": 152
+    },
+    {
+      "nct": "NCT01083160",
+      "title": "Clinical Outcomes, Compliance and Effectiveness of Switching From Infliximab or Etanercept to Adalimumab in Patients With Active Rheumatoid Arthritis (RA). A Multicenter Post-Marketing Observational Study in Routine Clinical Use",
+      "status": "TERMINATED",
+      "phase": null,
+      "enrollment": 82
+    },
+    {
+      "nct": "NCT01084668",
+      "title": "Quality of Life in Adalimumab Treated Psoriasis Patients Failing Other Biologic Disease Modifying Anti-rheumatic Drugs",
+      "status": "COMPLETED",
+      "phase": null,
+      "enrollment": 46
+    },
+    {
+      "nct": "NCT00853099",
+      "title": "A Study of Adalimumab in Japanese Subjects With Moderately to Severely Active Ulcerative Colitis",
+      "status": "COMPLETED",
+      "phase": "PHASE3",
+      "enrollment": 274
+    },
+    {
+      "nct": "NCT01387802",
+      "title": "Canadian Humira Post Marketing Observational Epidemiological Study: Assessing Effectiveness in Ankylosing Spondylitis",
+      "status": "COMPLETED",
+      "phase": null,
+      "enrollment": 722
+    },
+    {
+      "nct": "NCT00216177",
+      "title": "Comparison of Adalimumab and Infliximab Treatment of Rheumatoid Arthritis",
+      "status": "UNKNOWN",
+      "phase": "PHASE4",
+      "enrollment": 112
+    },
+    {
+      "nct": "NCT06180382",
+      "title": "Comparison of Vedolizumab Treatment to Adalimumab Dose Intensification in Crohn's Disease Patients With Loss of Response or Biomarker Activity to Adalimumab on First Line With Therapeutic Drug Concentration.",
+      "status": "RECRUITING",
+      "phase": "PHASE4",
+      "enrollment": 220
+    }
+  ],
+  "nadac": {
+    "year": 2026,
+    "rows": [
+      {
+        "ndc": "65219061299",
+        "description": "ADALIMUMAB-AACF(CF) PEN 40 MG/0.8 ML (2 PACK)",
+        "perUnit": 872.7719,
+        "unit": "EA",
+        "effective": "2025-12-17",
+        "cls": "G"
+      },
+      {
+        "ndc": "61314032720",
+        "description": "ADALIMUMAB-ADAZ(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 1592.35758,
+        "unit": "ML",
+        "effective": "2025-12-17",
+        "cls": "G"
+      },
+      {
+        "ndc": "00597057550",
+        "description": "ADALIMUMAB-ADBM(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 636.03667,
+        "unit": "EA",
+        "effective": "2025-12-17",
+        "cls": "G"
+      },
+      {
+        "ndc": "82009014422",
+        "description": "ADALIMUMAB-ADBM(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 636.03667,
+        "unit": "EA",
+        "effective": "2025-12-17",
+        "cls": "G"
+      },
+      {
+        "ndc": "65219061299",
+        "description": "ADALIMUMAB-AACF(CF) PEN 40 MG/0.8 ML (2 PACK)",
+        "perUnit": 872.7719,
+        "unit": "EA",
+        "effective": "2025-12-17",
+        "cls": "G"
+      },
+      {
+        "ndc": "61314032720",
+        "description": "ADALIMUMAB-ADAZ(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 1592.35758,
+        "unit": "ML",
+        "effective": "2025-12-17",
+        "cls": "G"
+      },
+      {
+        "ndc": "00597057550",
+        "description": "ADALIMUMAB-ADBM(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 636.03667,
+        "unit": "EA",
+        "effective": "2025-12-17",
+        "cls": "G"
+      },
+      {
+        "ndc": "82009014422",
+        "description": "ADALIMUMAB-ADBM(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 636.03667,
+        "unit": "EA",
+        "effective": "2025-12-17",
+        "cls": "G"
+      },
+      {
+        "ndc": "65219061299",
+        "description": "ADALIMUMAB-AACF(CF) PEN 40 MG/0.8 ML (2 PACK)",
+        "perUnit": 872.35238,
+        "unit": "EA",
+        "effective": "2026-01-21",
+        "cls": "G"
+      },
+      {
+        "ndc": "61314032720",
+        "description": "ADALIMUMAB-ADAZ(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 1592.99942,
+        "unit": "ML",
+        "effective": "2026-01-21",
+        "cls": "G"
+      },
+      {
+        "ndc": "00597057550",
+        "description": "ADALIMUMAB-ADBM(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 636.16959,
+        "unit": "EA",
+        "effective": "2026-01-21",
+        "cls": "G"
+      },
+      {
+        "ndc": "82009014422",
+        "description": "ADALIMUMAB-ADBM(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 636.16959,
+        "unit": "EA",
+        "effective": "2026-01-21",
+        "cls": "G"
+      },
+      {
+        "ndc": "65219061299",
+        "description": "ADALIMUMAB-AACF(CF) PEN 40 MG/0.8 ML (2 PACK)",
+        "perUnit": 872.35238,
+        "unit": "EA",
+        "effective": "2026-01-21",
+        "cls": "G"
+      },
+      {
+        "ndc": "61314032720",
+        "description": "ADALIMUMAB-ADAZ(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 1592.99942,
+        "unit": "ML",
+        "effective": "2026-01-21",
+        "cls": "G"
+      },
+      {
+        "ndc": "00597057550",
+        "description": "ADALIMUMAB-ADBM(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 636.16959,
+        "unit": "EA",
+        "effective": "2026-01-21",
+        "cls": "G"
+      },
+      {
+        "ndc": "82009014422",
+        "description": "ADALIMUMAB-ADBM(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 636.16959,
+        "unit": "EA",
+        "effective": "2026-01-21",
+        "cls": "G"
+      },
+      {
+        "ndc": "65219061299",
+        "description": "ADALIMUMAB-AACF(CF) PEN 40 MG/0.8 ML (2 PACK)",
+        "perUnit": 872.35238,
+        "unit": "EA",
+        "effective": "2026-01-21",
+        "cls": "G"
+      },
+      {
+        "ndc": "61314032720",
+        "description": "ADALIMUMAB-ADAZ(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 1592.99942,
+        "unit": "ML",
+        "effective": "2026-01-21",
+        "cls": "G"
+      },
+      {
+        "ndc": "00597057550",
+        "description": "ADALIMUMAB-ADBM(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 636.16959,
+        "unit": "EA",
+        "effective": "2026-01-21",
+        "cls": "G"
+      },
+      {
+        "ndc": "82009014422",
+        "description": "ADALIMUMAB-ADBM(CF) PEN 40 MG/0.4 ML",
+        "perUnit": 636.16959,
+        "unit": "EA",
+        "effective": "2026-01-21",
+        "cls": "G"
+      }
+    ]
+  },
+  "costExample": {
+    "ok": true,
+    "perAdmin": 636.17,
+    "annual": 16540.41,
+    "rowsUsed": 15,
+    "ndcs": [
+      "65219061299",
+      "00597057550",
+      "82009014422",
+      "65219061299",
+      "00597057550",
+      "82009014422",
+      "65219061299",
+      "00597057550",
+      "82009014422",
+      "65219061299",
+      "00597057550",
+      "82009014422",
+      "65219061299",
+      "00597057550",
+      "82009014422"
+    ]
+  }
+}

@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Switch Dossier · Generic/Biosimilar Research Agent (UI mockup)</title>
+<style>
+:root{
+  --ink:#14213d; --mut:#5b6678; --line:#e3e8ef; --bg:#f5f7fa; --card:#fff;
+  --brand:#0f5e73; --brand2:#e6f2f5; --ok:#1a7f4b; --okbg:#e5f5ec; --warn:#a15c00; --warnbg:#fff3dc;
+  --bad:#b42318; --badbg:#fdecea; --info:#2b5fb3; --infobg:#e8f0fc;
+}
+*{box-sizing:border-box}
+body{margin:0;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+header.top{background:var(--ink);color:#fff;padding:12px 28px;display:flex;align-items:center;gap:16px}
+header.top .logo{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#2bb3c9,#0f5e73);display:grid;place-items:center;font-weight:700}
+header.top h1{font-size:16px;margin:0;font-weight:600}
+header.top small{color:#a9b6cc}
+.mock{margin-left:auto;background:#ffffff22;border:1px solid #ffffff44;border-radius:20px;padding:3px 12px;font-size:12px}
+nav.steps{display:flex;gap:8px;padding:14px 28px;background:#fff;border-bottom:1px solid var(--line)}
+nav.steps button{border:1px solid var(--line);background:#fff;color:var(--mut);padding:6px 14px;border-radius:20px;cursor:pointer;font:inherit}
+nav.steps button.on{background:var(--brand);border-color:var(--brand);color:#fff}
+main{max-width:1180px;margin:0 auto;padding:26px 28px 80px}
+.screen{display:none}.screen.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;margin-bottom:18px}
+h2{font-size:20px;margin:0 0 4px}
+h3{font-size:15px;margin:0 0 10px}
+.sub{color:var(--mut);margin:0 0 18px}
+label{display:block;font-weight:600;margin:0 0 4px}
+.opt{font-weight:400;color:var(--mut);font-size:12px;margin-left:6px}
+.hint{font-size:12px;color:var(--mut);margin-top:4px}
+input,select{width:100%;padding:10px 12px;border:1px solid #c9d2de;border-radius:8px;font:inherit;background:#fff}
+input:focus,select:focus{outline:2px solid var(--brand2);border-color:var(--brand)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.field{margin-bottom:18px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{background:var(--brand2);color:var(--brand);border-radius:16px;padding:3px 10px;font-size:12px;cursor:pointer;border:1px solid transparent}
+.chip.sel{background:var(--warnbg);color:var(--warn);border-color:#f1d29b}
+.chip .x{margin-left:6px;opacity:.6}
+.btn{background:var(--brand);color:#fff;border:0;border-radius:8px;padding:11px 22px;font:inherit;font-weight:600;cursor:pointer}
+.btn.sec{background:#fff;color:var(--brand);border:1px solid var(--brand)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.row{display:flex;gap:12px;align-items:center}
+.disc{background:var(--infobg);border:1px solid #c5d8f5;color:#1f3f78;border-radius:10px;padding:10px 14px;font-size:12.5px}
+.suggest{border:1px solid var(--line);border-radius:10px;margin-top:10px;overflow:hidden}
+.suggest div{padding:10px 14px;display:flex;justify-content:space-between;cursor:pointer;border-bottom:1px solid var(--line)}
+.suggest div:last-child{border:0}.suggest div:hover{background:var(--brand2)}
+.suggest em{color:var(--mut);font-style:normal;font-size:12px}
+.how{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:6px}
+.how div{background:#fafbfd;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:12.5px;color:var(--mut)}
+.how b{display:block;color:var(--ink);margin-bottom:2px}
+
+/* running */
+.pipe{display:grid;grid-template-columns:150px 1fr;gap:12px 20px;align-items:center}
+.stage{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fff;display:flex;gap:10px;align-items:center;min-height:50px}
+.stage .dot{width:10px;height:10px;border-radius:50%;background:#c4ccd8;flex:none}
+.stage.run{border-color:var(--brand);background:var(--brand2)}.stage.run .dot{background:var(--brand);animation:pulse 1s infinite}
+.stage.done .dot{background:var(--ok)}.stage.warn .dot{background:var(--warn)}
+.stage small{display:block;color:var(--mut);font-size:11.5px}
+.stage b{font-size:13px}
+.par{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.plabel{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);font-weight:700}
+@keyframes pulse{50%{opacity:.3}}
+.log{background:#0e1a2b;color:#cfe0f5;border-radius:10px;padding:14px;font:12px/1.7 ui-monospace,Menlo,monospace;height:240px;overflow:auto}
+.log .t{color:#6f8bb3}.log .w{color:#ffcf7a}.log .g{color:#7be0a5}.log .a{color:#8cc8ff}
+.bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin:6px 0 16px}.bar i{display:block;height:100%;width:0;background:var(--brand);transition:width .4s}
+
+/* dossier */
+.dh{display:flex;gap:20px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.tag{border:1px solid var(--line);background:#fafbfd;border-radius:6px;padding:2px 8px;font-size:12px;color:var(--mut)}
+.tag b{color:var(--ink)}
+.rec{border-radius:12px;padding:18px 22px;border:1px solid #f1d29b;background:var(--warnbg);display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;margin-bottom:18px}
+.rec .big{font-size:22px;font-weight:800;color:var(--warn);letter-spacing:.02em}
+.rec .why{color:#5b3a00}
+.conf{text-align:center}.conf b{font-size:20px;display:block}.conf span{font-size:11px;color:var(--mut);text-transform:uppercase}
+.layout{display:grid;grid-template-columns:200px 1fr;gap:22px}
+.toc{position:sticky;top:10px;align-self:start;font-size:13px}
+.toc a{display:block;padding:6px 10px;border-radius:6px;color:var(--mut);text-decoration:none}
+.toc a:hover{background:var(--brand2);color:var(--brand)}
+.sec h3{display:flex;align-items:center;gap:10px}
+.pill{font-size:11px;padding:2px 9px;border-radius:12px;font-weight:600}
+.pill.hi{background:var(--okbg);color:var(--ok)}.pill.mo{background:var(--warnbg);color:var(--warn)}.pill.lo{background:var(--badbg);color:var(--bad)}
+ul.cl{margin:0;padding:0;list-style:none}
+ul.cl li{padding:8px 0;border-bottom:1px solid var(--line)}ul.cl li:last-child{border:0}
+.cid{display:inline-block;background:var(--infobg);color:var(--info);border-radius:4px;font-size:11px;font-weight:700;padding:0 6px;margin-left:6px;cursor:pointer;vertical-align:1px}
+.cid:hover{background:var(--info);color:#fff}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);background:#fafbfd}
+.ok{color:var(--ok);font-weight:600}.wn{color:var(--warn);font-weight:600}.bd{color:var(--bad);font-weight:600}
+.conflict{border:1px solid #f1d29b;background:#fffaf0;border-radius:10px;padding:14px;margin-top:12px}
+.conflict .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.conflict .cols>div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px}
+.calc{background:#fafbfd;border:1px solid var(--line);border-radius:10px;padding:14px;margin-top:14px}
+.calc .out{font-size:24px;font-weight:800;color:var(--brand)}
+.calc input[type=range]{padding:0}
+.gap{border-left:3px solid var(--warn);background:var(--warnbg);padding:8px 12px;border-radius:0 8px 8px 0;margin:8px 0;font-size:13px}
+.drop{border-left:3px solid var(--bad);background:var(--badbg);padding:8px 12px;border-radius:0 8px 8px 0;margin:8px 0;font-size:13px}
+/* drawer */
+.drawer{position:fixed;top:0;right:-460px;width:440px;height:100%;background:#fff;border-left:1px solid var(--line);box-shadow:-8px 0 30px #0002;transition:right .25s;padding:22px;z-index:20;overflow:auto}
+.drawer.on{right:0}
+.drawer blockquote{margin:10px 0;padding:10px 14px;background:#f3f6fa;border-left:3px solid var(--brand);border-radius:0 8px 8px 0;font-size:13px}
+.drawer .close{float:right;cursor:pointer;font-size:20px;color:var(--mut)}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:6px 10px;font-size:13px;margin-top:10px}.kv span:nth-child(odd){color:var(--mut)}
+@media(max-width:900px){.grid2,.grid3,.how,.layout,.par{grid-template-columns:1fr}.rec{grid-template-columns:1fr}.toc{display:none}.pipe{grid-template-columns:1fr}}
+@media print{header.top,nav.steps,.toc,.noprint,.drawer{display:none!important}.layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="logo">Rx</div>
+  <div><h1>Switch Dossier</h1><small>Generic / biosimilar switch research agent · for pharmacists &amp; market access analysts</small></div>
+  <span class="mock">UI mockup · sample data only</span>
+</header>
+<nav class="steps">
+  <button data-go="input" class="on">1 · Request</button>
+  <button data-go="run">2 · Agents working</button>
+  <button data-go="dossier">3 · Dossier</button>
+</nav>
+
+<main>
+<!-- ================= INPUT ================= -->
+<section id="input" class="screen on">
+  <div class="card">
+    <h2>Build a switch dossier</h2>
+    <p class="sub">Enter a drug name. Dosage and allergy details are optional; they tailor the cost scenario and the formulation screen.</p>
+    <div class="grid2">
+      <div class="field">
+        <label>Drug name <span style="color:var(--bad)">*</span></label>
+        <input id="drug" placeholder="Brand or generic, e.g. Remicade, infliximab, Humira" autocomplete="off">
+        <div class="hint">Brand, generic, or biosimilar name (suffixes like <i>infliximab-dyyb</i> are understood).</div>
+        <div id="suggest" class="suggest" hidden>
+          <div data-v="Remicade (infliximab)"><span>Remicade <em>· infliximab · BLA · originator</em></span><em>Select</em></div>
+          <div data-v="Renflexis (infliximab-abda)"><span>Renflexis <em>· infliximab-abda · BLA · biosimilar</em></span><em>Select</em></div>
+          <div data-v="Inflectra (infliximab-dyyb)"><span>Inflectra <em>· infliximab-dyyb · BLA · biosimilar</em></span><em>Select</em></div>
+        </div>
+      </div>
+      <div class="field">
+        <label>Dosage <span class="opt">optional</span></label>
+        <input id="dose" placeholder="e.g. 5 mg/kg every 8 weeks, or 40 mg every 2 weeks">
+        <div class="hint">Used for annual cost per patient. Without it, the dossier shows unit prices only.</div>
+      </div>
+    </div>
+    <div class="field">
+      <label>Allergies / sensitivities <span class="opt">optional</span></label>
+      <input id="alg" placeholder="Type an allergen and press Enter (e.g. latex, polysorbate 80)">
+      <div class="chips" id="algChips"></div>
+      <div class="hint">Quick add:
+        <span class="chip" data-a="latex">latex</span> <span class="chip" data-a="polysorbate">polysorbate</span>
+        <span class="chip" data-a="murine proteins">murine proteins</span> <span class="chip" data-a="gelatin">gelatin</span>
+        <span class="chip" data-a="sulfonamide">sulfonamide</span>
+      </div>
+    </div>
+    <details style="margin-bottom:18px">
+      <summary style="cursor:pointer;color:var(--brand);font-weight:600">Optional scope: state, indication</summary>
+      <div class="grid2" style="margin-top:12px">
+        <div><label>State <span class="opt">for substitution rules</span></label>
+          <select id="state"><option value="">Not specified</option><option>CA</option><option>FL</option><option>NY</option><option>OH</option><option>PA</option><option>TX</option></select></div>
+        <div><label>Indication <span class="opt">focus the evidence search</span></label><input placeholder="e.g. rheumatoid arthritis, Crohn's disease"></div>
+      </div>
+    </details>
+    <div class="row">
+      <button class="btn" id="go">Generate dossier</button>
+      <button class="btn sec" id="skip">Skip to sample dossier</button>
+      <span class="hint">Typically 2–4 minutes. Every claim is verified against its source before it appears.</span>
+    </div>
+  </div>
+  <div class="card">
+    <h3>How the agents work</h3>
+    <div class="how">
+      <div><b>1 · Resolve &amp; plan</b>Maps your drug name to FDA identifiers, finds alternatives, picks the biologic or small-molecule path.</div>
+      <div><b>2 · Retrieve in parallel</b>FDA, patents &amp; exclusivity, PubMed &amp; ClinicalTrials.gov, NADAC pricing, state rules.</div>
+      <div><b>3 · Extract &amp; verify</b>Schema-enforced extraction. Each claim is checked against source text; unsupported claims are dropped.</div>
+      <div><b>4 · Synthesize</b>Dossier with recommendation and stated limits. Conflicting studies are shown, not averaged.</div>
+    </div>
+  </div>
+  <div class="disc">For professional use by pharmacists and market access analysts. This is decision support, not patient-facing clinical advice. Expert review is required before any formulary action. All tools are read-only.</div>
+</section>
+
+<!-- ================= RUN ================= -->
+<section id="run" class="screen">
+  <div class="card">
+    <div class="row" style="justify-content:space-between">
+      <div><h2 id="runTitle">Researching Remicade (infliximab)</h2><p class="sub" id="runSub">Dose: 5 mg/kg every 8 weeks · Allergies: latex</p></div>
+      <button class="btn sec noprint" id="restart">Restart demo</button>
+    </div>
+    <div class="bar"><i id="prog"></i></div>
+    <div class="pipe">
+      <div class="plabel">Plan</div>
+      <div class="stage" data-s="orch"><span class="dot"></span><div><b>Orchestrator</b><small>Plan research path, own retries</small></div></div>
+      <div class="plabel">Identify</div>
+      <div class="stage" data-s="res"><span class="dot"></span><div><b>Drug Resolver</b><small>Canonical IDs, alternatives, biologic path</small></div></div>
+      <div class="plabel">Retrieve<br>(parallel)</div>
+      <div class="par">
+        <div class="stage" data-s="fda"><span class="dot"></span><div><b>FDA status</b><small>Approvals, labels</small></div></div>
+        <div class="stage" data-s="pat"><span class="dot"></span><div><b>Patent &amp; exclusivity</b><small>Entry timing</small></div></div>
+        <div class="stage" data-s="cli"><span class="dot"></span><div><b>Clinical evidence</b><small>PubMed, trials</small></div></div>
+        <div class="stage" data-s="prc"><span class="dot"></span><div><b>Pricing</b><small>NADAC benchmark</small></div></div>
+        <div class="stage" data-s="sta"><span class="dot"></span><div><b>State rules</b><small>Substitution law</small></div></div>
+      </div>
+      <div class="plabel">Structure</div>
+      <div class="stage" data-s="ext"><span class="dot"></span><div><b>Extractor</b><small>Schema-validated fields; missing = “not reported”</small></div></div>
+      <div class="plabel">Check</div>
+      <div class="stage" data-s="ver"><span class="dot"></span><div><b>Verifier</b><small>Claim vs. source text; gates synthesis</small></div></div>
+      <div class="plabel">Write</div>
+      <div class="stage" data-s="syn"><span class="dot"></span><div><b>Synthesizer</b><small>Dossier + recommendation with limits</small></div></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Activity log</h3>
+    <div class="log" id="log"></div>
+    <div class="row" style="margin-top:14px"><button class="btn" id="view" disabled>View dossier</button></div>
+  </div>
+</section>
+
+<!-- ================= DOSSIER ================= -->
+<section id="dossier" class="screen">
+  <div class="card">
+    <div class="dh">
+      <div>
+        <h2>Switch dossier: Remicade (infliximab) → biosimilar alternatives</h2>
+        <div class="meta">
+          <span class="tag">Type <b>Biologic</b></span><span class="tag">Dose <b>5 mg/kg q8w</b></span>
+          <span class="tag">Allergy screen <b>latex</b></span><span class="tag">State <b>OH</b></span>
+          <span class="tag">Generated <b>Nov 1, 2026</b></span><span class="tag">Data pulled <b>today</b></span>
+        </div>
+      </div>
+      <div class="row noprint"><button class="btn sec" onclick="window.print()">Print / PDF</button><button class="btn sec">Export JSON</button><button class="btn" onclick="show('input')">New dossier</button></div>
+    </div>
+  </div>
+  <div class="disc" style="margin-bottom:18px"><b>Sample data.</b> Names and figures below are illustrative placeholders to show the layout; they are not real findings. Professional decision support only. Human expert review required.</div>
+
+  <div class="rec">
+    <div class="big">CONDITIONAL</div>
+    <div class="why" id="recWhy"></div>
+    <div class="conf"><b>Moderate</b><span>Overall confidence</span></div>
+  </div>
+
+  <div class="layout">
+    <div class="toc noprint" id="toc"></div>
+    <div id="sections"></div>
+  </div>
+</section>
+</main>
+
+<aside class="drawer" id="drawer"></aside>
+
+<script>
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+
+/* ---------- navigation ---------- */
+function show(id){
+  $$('.screen').forEach(s=>s.classList.toggle('on', s.id===id));
+  $$('nav.steps button').forEach(b=>b.classList.toggle('on', b.dataset.go===id));
+  window.scrollTo(0,0);
+}
+$$('nav.steps button').forEach(b=>b.onclick=()=>show(b.dataset.go));
+
+/* ---------- input screen ---------- */
+const algs = new Set();
+function drawAlg(){
+  $('#algChips').innerHTML = [...algs].map(a=>`<span class="chip sel">${a}<span class="x" data-r="${a}">✕</span></span>`).join('');
+  $$('#algChips .x').forEach(x=>x.onclick=()=>{algs.delete(x.dataset.r);drawAlg()});
+}
+$('#alg').addEventListener('keydown',e=>{
+  if((e.key==='Enter'||e.key===',')&&e.target.value.trim()){e.preventDefault();algs.add(e.target.value.trim().toLowerCase());e.target.value='';drawAlg()}
+});
+$$('.chip[data-a]').forEach(c=>c.onclick=()=>{algs.add(c.dataset.a);drawAlg()});
+$('#drug').addEventListener('input',e=>{ $('#suggest').hidden = !/^(rem|inf|ren|remi)/i.test(e.target.value.trim()) });
+$$('#suggest div').forEach(d=>d.onclick=()=>{$('#drug').value=d.dataset.v;$('#suggest').hidden=true});
+$('#skip').onclick=()=>{buildDossier();show('dossier')};
+$('#go').onclick=()=>{
+  const name=$('#drug').value.trim()||'Remicade (infliximab)';
+  $('#runTitle').textContent='Researching '+name;
+  const bits=[]; if($('#dose').value.trim()) bits.push('Dose: '+$('#dose').value.trim());
+  bits.push('Allergies: '+([...algs].join(', ')||'none entered'));
+  if($('#state').value) bits.push('State: '+$('#state').value);
+  $('#runSub').textContent=bits.join(' · ');
+  buildDossier(); startRun(); show('run');
+};
+
+/* ---------- simulated agent run ---------- */
+const script = [
+ [0,'orch','run','a','Orchestrator: plan created. Resolve drug → choose regulatory path → fan out retrievers.'],
+ [700,'orch','done'],
+ [800,'res','run','a','Resolver: searching FDA labels for “Remicade”.'],
+ [1500,null,null,'g','Resolver: canonical generic = infliximab; BLA reference product; 4 biosimilars found (suffixes -dyyb, -abda, -axxq, …).'],
+ [1700,'res','done','a','Path decided: biologic → Purple Book route, BPCIA exclusivity, switching-study search.'],
+ [1900,'fda','run'],[1900,'pat','run'],[1900,'cli','run'],[1900,'prc','run'],[1900,'sta','run'],
+ [2300,null,null,'a','Clinical: PubMed query 1 “infliximab biosimilar switch interchangeab*” → 3 results.'],
+ [2700,null,null,'w','Clinical: query 2 returned 0 new → reformulating with “transition”, “non-medical switch”.'],
+ [3100,null,null,'a','Clinical: query 3 → 6 additional abstracts; 2 trial records from ClinicalTrials.gov.'],
+ [3000,'fda','done','g','FDA: approvals and label text retrieved for 5 products.'],
+ [3300,'sta','done','g','State rules: OH entry found; baseline biologic substitution rules attached.'],
+ [3800,'pat','warn','w','Patent: open APIs return no patent listings for biologics → recorded as data gap; statutory exclusivity computed.'],
+ [4200,'prc','done','g','Pricing: NADAC rows found for 4 of 5 products. Originator infusion is Part B; ASP not wired in → flagged.'],
+ [4600,'cli','done','g','Clinical: 9 abstracts retrieved, 7 switching-relevant.'],
+ [4800,'ext','run','a','Extractor: validating schema on 7 abstracts…'],
+ [5500,null,null,'w','Extractor: PMID ●●●●●●● population_size missing after 2 retries → marked “not reported” (not guessed).'],
+ [5900,'ext','done','g','Extractor: 7 study records, 1 field marked not reported.'],
+ [6100,'ver','run','a','Verifier: checking 38 claims against source text…'],
+ [6900,null,null,'w','Verifier: 2 claims below 0.7 confidence → dropped from dossier, listed under “Flagged claims”.'],
+ [7300,'ver','done','g','Verifier: 36 of 38 claims retained (31 verified, 5 with caveats).'],
+ [7500,'syn','run','a','Synthesizer: assembling dossier. Surfacing 1 evidence conflict instead of averaging.'],
+ [8500,'syn','done','g','Dossier ready. Recommendation capped at CONDITIONAL: interchangeability not confirmed for all alternatives.'],
+];
+let timers=[];
+function startRun(){
+  timers.forEach(clearTimeout); timers=[];
+  $('#log').innerHTML=''; $('#view').disabled=true; $('#prog').style.width='0';
+  $$('.stage').forEach(s=>s.className='stage');
+  const total=8500;
+  script.forEach(([t,stage,state,lvl,msg])=>{
+    timers.push(setTimeout(()=>{
+      if(stage) $(`.stage[data-s="${stage}"]`).className='stage '+state;
+      if(msg){
+        const ts=new Date(Date.now()).toLocaleTimeString([], {hour12:false});
+        $('#log').insertAdjacentHTML('beforeend',`<div><span class="t">${ts}</span> <span class="${lvl}">${msg}</span></div>`);
+        $('#log').scrollTop=1e6;
+      }
+      $('#prog').style.width=Math.min(100,t/total*100)+'%';
+      if(t>=total){$('#view').disabled=false;$('#prog').style.width='100%'}
+    },t));
+  });
+}
+$('#restart').onclick=startRun;
+$('#view').onclick=()=>show('dossier');
+
+/* ---------- dossier (sample data) ---------- */
+const claims = {
+ C1:{t:'Remicade (infliximab) is the reference product, licensed under a BLA and marketed.',src:'FDA Drugs@FDA record',q:'Application BLA ●●●●●● · ORIG · AP · marketing status: Prescription',conf:1.0,st:'VERIFIED'},
+ C2:{t:'Four FDA-licensed infliximab biosimilars were found (sample names).',src:'openFDA label records',q:'generic_name: INFLIXIMAB-DYYB … INFLIXIMAB-ABDA … INFLIXIMAB-AXXQ …',conf:1.0,st:'VERIFIED'},
+ C3:{t:'Reference-product statutory exclusivity under BPCIA ended 12 years after original approval.',src:'Computed (BPCIA 12-year rule)',q:'approval date + 12 years (recomputed by verifier)',conf:1.0,st:'VERIFIED · COMPUTED'},
+ C4:{t:'Interchangeability: label text for one alternative references interchangeability; not confirmed for the others.',src:'Label text (DailyMed)',q:'“…interchangeable…” (sample quote)',conf:0.7,st:'SUPPORTED WITH CAVEATS'},
+ C5:{t:'All products are lyophilized powder for IV infusion in single-dose vials; storage 2–8 °C.',src:'Label: how supplied / storage',q:'Store unopened vials in a refrigerator at 2°C to 8°C (sample)',conf:1.0,st:'VERIFIED'},
+ C6:{t:'Latex: one alternative’s label mentions natural rubber latex in packaging; the others state it is not made with latex.',src:'Label: how supplied',q:'“…not made with natural rubber latex…” (sample)',conf:0.9,st:'STRONGLY SUPPORTED'},
+ C7:{t:'Randomized switch trial (n≈480, 52 weeks): switching to the biosimilar was non-inferior to staying on the originator.',src:'PubMed abstract (sample)',q:'“…switching … was not inferior to continued treatment…” (sample)',conf:0.95,st:'VERIFIED'},
+ C8:{t:'Observational cohort (n=210): higher discontinuation after switching in one subgroup; design limits causal reading.',src:'PubMed abstract (sample)',q:'“…discontinuation was higher in the switch group…” (sample)',conf:0.85,st:'STRONGLY SUPPORTED'},
+ C9:{t:'Open-label extension following a switch: efficacy maintained through follow-up.',src:'PubMed abstract (sample)',q:'“…efficacy was maintained…” (sample)',conf:0.9,st:'STRONGLY SUPPORTED'},
+ C10:{t:'NADAC-based annual drug cost per patient, originator: $XX,XXX (illustrative).',src:'NADAC, latest effective date',q:'NDC ●●●●●●●●●●● · NADAC per unit $●●●.●● (sample)',conf:1.0,st:'VERIFIED · COMPUTED'},
+ C11:{t:'NADAC-based annual cost per patient, lowest-cost biosimilar: $XX,XXX (illustrative).',src:'NADAC, latest effective date',q:'NDC ●●●●●●●●●●● · NADAC per unit $●●●.●● (sample)',conf:1.0,st:'VERIFIED · COMPUTED'},
+ C12:{t:'Biologic substitution baseline: only interchangeable products may be substituted at pharmacy; prescriber may block; notification required.',src:'State rules table (baseline)',q:'FDA must have designated the product interchangeable… (table text)',conf:1.0,st:'VERIFIED'},
+ C13:{t:'Ohio-specific entry present in the rules table.',src:'State rules table (OH)',q:'(sample table entry)',conf:0.9,st:'STRONGLY SUPPORTED'},
+};
+const PER_PATIENT_SAVINGS = 4200; // illustrative
+
+const sections = [
+ {id:'summary',title:'1 · Executive summary',conf:['mo','Moderate'],body:()=>`
+   <ul class="cl">
+    <li>Reference product Remicade has <b>4 FDA-licensed biosimilar alternatives</b> on the market ${c('C1','C2')}.</li>
+    <li>Switching evidence is mostly favorable: two studies support non-inferiority or maintained efficacy, one observational study raised a discontinuation signal ${c('C7','C8','C9')}.</li>
+    <li>Illustrative benchmark savings of about <b>$4,200 per patient per year</b> using NADAC, which is not a contracted price ${c('C10','C11')}.</li>
+    <li>Pharmacy-level substitution is limited because interchangeability is not confirmed for all alternatives ${c('C4','C12')}.</li>
+   </ul>`},
+ {id:'reg',title:'2 · Regulatory status',conf:['mo','Moderate'],body:()=>`
+   <table><tr><th>Product</th><th>Role</th><th>Application</th><th>Interchangeable</th><th>Source</th></tr>
+    <tr><td>Remicade (infliximab)</td><td>Reference</td><td>BLA ●●●●●●</td><td>n/a</td><td>${c('C1')}</td></tr>
+    <tr><td>Inflectra (infliximab-dyyb)</td><td>Biosimilar</td><td>BLA ●●●●●●</td><td class="wn">Label mentions it ${c('C4')}</td><td>${c('C2')}</td></tr>
+    <tr><td>Renflexis (infliximab-abda)</td><td>Biosimilar</td><td>BLA ●●●●●●</td><td class="wn">Not confirmed</td><td>${c('C2')}</td></tr>
+    <tr><td>Avsola (infliximab-axxq)</td><td>Biosimilar</td><td>BLA ●●●●●●</td><td class="wn">Not confirmed</td><td>${c('C2')}</td></tr></table>
+   <p>Statutory exclusivity for the reference product has elapsed ${c('C3')}.</p>
+   <div class="gap"><b>Data gap.</b> Patent and litigation timing is not available from the open sources used. Entry timing reflects approvals and statutory exclusivity only. Confirm interchangeability in the Purple Book.</div>`},
+ {id:'prod',title:'3 · Product comparison & allergy screen',conf:['hi','High'],body:()=>`
+   <ul class="cl"><li>All products: lyophilized powder, single-dose IV vial, refrigerated storage ${c('C5')}.</li></ul>
+   <h3 style="margin-top:14px">Allergy / sensitivity screen: <span class="tag"><b>latex</b></span></h3>
+   <table><tr><th>Product</th><th>Result in retrieved label text</th><th>Source</th></tr>
+    <tr><td>Remicade</td><td class="ok">Not mentioned</td><td>${c('C6')}</td></tr>
+    <tr><td>Inflectra</td><td class="wn">Mentioned (negated: “not made with latex”)</td><td>${c('C6')}</td></tr>
+    <tr><td>Renflexis</td><td class="bd">Mentioned in packaging (review)</td><td>${c('C6')}</td></tr>
+    <tr><td>Avsola</td><td class="ok">Not mentioned</td><td>${c('C6')}</td></tr></table>
+   <p class="hint">“Not mentioned” means the term was absent from the retrieved label sections. It does not prove the product is free of the allergen.</p>`},
+ {id:'clin',title:'4 · Clinical evidence',conf:['mo','Moderate (conflict)'],body:()=>`
+   <table><tr><th>Study</th><th>Design</th><th>n</th><th>Finding</th><th>Conf.</th></tr>
+    <tr><td>Sample RCT ${c('C7')}</td><td>Randomized, 52 wk</td><td>≈480</td><td class="ok">Non-inferior</td><td>0.95</td></tr>
+    <tr><td>Sample extension ${c('C9')}</td><td>Open-label extension</td><td>●●●</td><td class="ok">Efficacy maintained</td><td>0.90</td></tr>
+    <tr><td>Sample cohort ${c('C8')}</td><td>Observational</td><td>210</td><td class="wn">Higher discontinuation in subgroup</td><td>0.85</td></tr>
+    <tr><td>Sample registry</td><td>Observational</td><td><i>not reported</i></td><td>Inconclusive</td><td>n/a</td></tr></table>
+   <div class="conflict"><b>Evidence conflict (not averaged)</b>
+    <div class="cols">
+     <div><b class="ok">Supports switching</b><br>Randomized trial and extension show non-inferiority and maintained efficacy ${c('C7','C9')}.</div>
+     <div><b class="wn">Caution signal</b><br>Cohort reports higher discontinuation in a subgroup; observational design, different population ${c('C8')}.</div>
+    </div>
+    <p class="hint" style="margin-bottom:0">Interpretation is left to the reviewing pharmacist. Consider case-by-case review for the subgroup.</p></div>`},
+ {id:'cost',title:'5 · Cost analysis',conf:['hi','High'],body:()=>`
+   <table><tr><th>Product</th><th>Annual cost / patient (benchmark)</th><th>Source</th></tr>
+    <tr><td>Remicade (originator)</td><td>$XX,XXX</td><td>${c('C10')}</td></tr>
+    <tr><td>Lowest-cost biosimilar</td><td>$XX,XXX</td><td>${c('C11')}</td></tr>
+    <tr><td><b>Difference</b></td><td><b>$4,200 (illustrative)</b></td><td>Computed</td></tr></table>
+   <div class="gap"><b>Pricing assumption.</b> NADAC reflects pharmacy acquisition cost benchmarks. It is not a contracted rate, ASP, or net price after rebates. Infusion drugs billed under Part B may differ materially.</div>
+   <div class="calc"><b>Formulary impact scenario</b>
+    <div class="grid3" style="margin-top:10px">
+      <div><label>Patients on therapy</label><input id="pts" type="number" value="150"></div>
+      <div><label>Converted: <span id="pctv">60</span>%</label><input id="pct" type="range" min="0" max="100" value="60"></div>
+      <div><label>Estimated annual savings</label><div class="out" id="sav"></div></div>
+    </div><div class="hint">Uses the per-patient benchmark difference above. Edit inputs to explore; does not change the verified figures.</div></div>`},
+ {id:'state',title:'6 · State-specific rules (OH)',conf:['mo','Moderate'],body:()=>`
+   <ul class="cl">
+    <li>Pharmacy-level substitution of biologics requires an FDA-designated interchangeable product, allows prescriber override, and requires prescriber notification ${c('C12')}.</li>
+    <li>A state-specific entry exists for Ohio ${c('C13')}.</li>
+    <li>A non-interchangeable biosimilar generally needs a prescriber order, for example under a P&amp;T-approved switch protocol.</li></ul>
+   <div class="gap"><b>Verify.</b> Confirm against the current state practice act before adopting policy.</div>`},
+ {id:'lim',title:'7 · Limitations & caveats',conf:null,body:()=>`
+   <div class="gap">No patent or litigation data (open sources only).</div>
+   <div class="gap">Interchangeability not confirmed for 3 of 4 alternatives; Purple Book not wired in.</div>
+   <div class="gap">Pricing is benchmark only; Part B ASP not included.</div>
+   <div class="gap">1 study had population size marked <i>not reported</i> after extraction retries.</div>
+   <div class="gap">Recommendation capped at CONDITIONAL. Human expert review required.</div>
+   <h3 style="margin-top:14px">Flagged claims removed (confidence &lt; 0.7)</h3>
+   <div class="drop">“Biosimilar X launched in all channels in Q1.” Source did not support the date. Dropped.</div>
+   <div class="drop">“Study Y reported no immunogenicity difference.” Quote not found in abstract. Dropped.</div>`},
+ {id:'ev',title:'8 · Evidence & citations',conf:null,body:()=>`
+   <table><tr><th>ID</th><th>Claim</th><th>Source</th><th>Status</th><th>Conf.</th></tr>
+   ${Object.entries(claims).map(([k,v])=>`<tr><td>${c(k)}</td><td>${v.t}</td><td>${v.src}</td><td>${v.st}</td><td>${v.conf.toFixed(2)}</td></tr>`).join('')}
+   </table>`},
+];
+function c(...ids){return ids.map(i=>`<span class="cid" data-c="${i}">${i}</span>`).join('')}
+
+function buildDossier(){
+  $('#recWhy').innerHTML = `Switching appears reasonable for stable patients, with limits: interchangeability is not confirmed for every alternative, one study shows a caution signal, and the latex screen needs review for one product. Review before formulary action ${c('C4','C8','C6')}.`;
+  $('#toc').innerHTML = sections.map(s=>`<a href="#${s.id}">${s.title}</a>`).join('');
+  $('#sections').innerHTML = sections.map(s=>`
+    <div class="card sec" id="${s.id}"><h3>${s.title}${s.conf?` <span class="pill ${s.conf[0]}">${s.conf[1]} confidence</span>`:''}</h3>${s.body()}</div>`).join('');
+  $$('.cid').forEach(el=>el.onclick=()=>openClaim(el.dataset.c));
+  const upd=()=>{ $('#pctv').textContent=$('#pct').value;
+    $('#sav').textContent='$'+Math.round($('#pts').value*$('#pct').value/100*PER_PATIENT_SAVINGS).toLocaleString(); };
+  $('#pts').oninput=upd; $('#pct').oninput=upd; upd();
+}
+function openClaim(id){
+  const k=claims[id]; if(!k) return;
+  $('#drawer').innerHTML=`<span class="close" onclick="$('#drawer').classList.remove('on')">×</span>
+   <h3>Claim ${id}</h3><p>${k.t}</p>
+   <blockquote>${k.q}</blockquote>
+   <div class="kv"><span>Source</span><span>${k.src}</span><span>Status</span><span><b>${k.st}</b></span><span>Confidence</span><span>${k.conf.toFixed(2)}</span><span>Rule</span><span>Claims below 0.70 are dropped before synthesis.</span></div>
+   <p class="hint" style="margin-top:16px">In the live app this opens the original source (PubMed, DailyMed, FDA, NADAC) with the exact matching passage highlighted.</p>`;
+  $('#drawer').classList.add('on');
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#drawer').classList.remove('on')});
+buildDossier();
+</script>
+</body>
+</html>

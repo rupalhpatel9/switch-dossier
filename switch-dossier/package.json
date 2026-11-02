@@ -1,0 +1,8 @@
+{
+  "name": "switch-dossier",
+  "version": "0.1.0",
+  "description": "Generic/biosimilar switch dossier generator: multi-agent research pipeline with a web UI",
+  "type": "module",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=20" }
+}
